@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Journal | Tyler Mullins | Code Louisville FSJS Jan 2018 Project</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="css/styles.css" rel="stylesheet">
+  </head>
+  <body>
+    <nav>
+      <span class="pull-left">
+        <h1>Records</h1>
+      </span>
+      <span class="pull-right">
+        <button id="add-file-button" class="btn btn-primary" onclick="handleAddFileClick()">Create Entry</button>
+      </span>
+    </nav>
+
+    <div class="container">
+  
+      <div id="list-container"></div>
+
+      <div id="form-container" class="panel hidden">
+        <form id="add-file-form">
+          <input type="hidden" id="entry-id" value="" />
+          <div class="form-group">
+            <label for="entry-date">Date</label>
+            <input type="date" class="form-control" id="entry-date">
+          </div>
+          <div class="form-group">
+            <label for="entry-title">Title</label>
+            <input type="text" class="form-control" id="entry-title" placeholder="The main topic on your mind">
+          </div>
+          <div class="form-group">
+            <label for="entry-content">Entry</label>
+            <textarea class="form-control" id="entry-content" placeholder="Record your most important daily moments here"></textarea>
+          </div>
+          <span class="pull-right">
+            <button type="button" onclick="cancelFileForm()" class="btn btn-link">Cancel</button>
+            <button type="button" onclick="submitFileForm()" class="btn btn-success">Submit</button>
+          </span>
+        </form>
+      </div>
+    </div>
+
+
+
+    <script id="list-template" type="text/x-handlebars-template">
+      <ul class="list-group">
+        {{#each files}}
+        <li class="list-group-item">
+          <h3>{{entryTitle}}</h3>
+          <h4>{{entryDate}}</h4>
+          <p>{{entryContent}}</p>
+          <hr>
+          <span class="pull-right">
+            <button type="button" class="btn btn-xs btn-default" onclick="handleEditFileClick('{{_id}}')">Edit</button>
+            <button type="button" class="btn btn-xs btn-danger" onclick="handleDeleteFileClick('{{_id}}')">Delete</button>
+          </span>
+        </li>
+        {{/each}}
+      </ul>
+    </script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.8/handlebars.min.js"></script>
+    <script src="/js/app.js"></script>
+
+  </body>
+</html>

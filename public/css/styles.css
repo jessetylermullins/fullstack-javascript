@@ -1,0 +1,123 @@
+/* FONT IMPORTS */
+
+@import url('https://fonts.googleapis.com/css?family=Bitter|Lato:300|Roboto-Mono" rel="stylesheet');
+
+@import url('https://use.fontawesome.com/releases/v5.0.1/css/all.css');
+
+/* /FONT IMPORTS */
+
+
+/* GLOBAL STYLES */
+
+  * {
+    box-sizing: border-box;
+    outline:none;
+  }
+
+  html {
+    font-size: 100%;
+  }
+
+  header {
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 200;
+    font-size: 1em;
+    color: gray;
+    background-color: lightgrey;
+  }
+
+  h1 {
+    font-family: "Roboto-Mono", monospace, sans-serif;
+    font-size: 1.25em;
+    color: grey;
+    line-height: 0em;
+    font-weight: bold;
+  }
+
+  h2 {
+    font-family: "Lato", sans-serif;
+    font-size: 0.8em;
+    font-weight: lighter;
+    color: grey;
+  }
+
+  h3 {
+    font-size: 1.5em;
+  }
+
+  h4 {
+    font-size: 0.8em;
+    font-style: italic;
+    color: lightgrey;
+    font-weight: lighter;
+  }
+
+  p {
+    font-size: 1em;
+    margin-top: 2.25em;
+    white-space: pre-line;
+  }
+
+  nav {
+    background-color: white;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    width: 100vw;
+    height: 72px;
+    padding: 1em;
+  }
+
+  header {
+    background-color: black;
+    padding: 3em 4em;
+    margin-bottom: 4em;
+  }
+
+  .container {
+    margin: 2em auto;
+    padding: 0;
+  }
+
+  #form-container {
+    position: fixed;
+    z-index: 99;
+    right: 0;
+    top: 64px;
+    height: 32em;
+    width: 32em;
+    padding: 1em 2em;
+    box-shadow: 4px 2px 8px grey;
+    margin: 0 auto;
+  }
+
+  .list-group {
+    display: flex;
+    flex-direction: column-reverse;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  li {
+    height: auto;
+    width: 90%;
+    padding: 2em 2.5em;
+    margin: 1em 0.5em;
+    box-shadow: 2px 2px 8px lightgrey;
+  }
+
+  li > .btn {
+    margin-left: 1em;
+  }
+
+  textarea {
+      resize: none;
+      min-height: 240px;
+  }
